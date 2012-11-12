@@ -65,7 +65,8 @@ public class LazyEagerTest {
                     invocations++;
                     return s.length() == 3;
                 })
-                .into(new ArrayList<>());
+                // <String> is needed here, because javac can't infer type here
+                .into(new ArrayList<String>());
 
         Assert.assertEquals(3, list.size());
         Assert.assertEquals(5, invocations);

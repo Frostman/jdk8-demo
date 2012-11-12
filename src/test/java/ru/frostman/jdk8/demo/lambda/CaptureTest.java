@@ -15,6 +15,7 @@ public class CaptureTest {
 
     @Test
     public void testLegacy() {
+        // + effective final
         final int minus_one = -1;
         final int zero = 0;
         final int one = 1;
